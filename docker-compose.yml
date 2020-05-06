@@ -4,17 +4,18 @@ services:
     build: ./docker/docsify
     container_name: docsify
     ports:
-      - "8000:8000"
+      - "10000:10000"
+      - "35729:35729"
     volumes:
         - ./docs:/site
     working_dir: /site
-    command: docsify serve . -p 8000
+    command: docsify serve . -p 10000 --livereload-port 35729
 
   plantuml:
     image: "jetty"
     container_name: plantuml
     ports:
-        - "8001:8080"
+        - "10001:8080"
     volumes:
         - ./plantuml.war:/var/lib/jetty/webapps/ROOT.war
 
