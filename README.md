@@ -13,7 +13,7 @@ This repo just sets up a basic docsify environment:
 To get started quickly, just do:
 
 ```
-$ git clone https://github.com/bylexus/docsify-starter
+$ git clone https://github.com/bylexus/docsify-starter.git
 $ cd docsify-starter
 $ docker-compose up
 ```
@@ -38,7 +38,7 @@ Your docsify docs are in the `docs/` dir. Feel free to edit them as needed!
 This Repo is meant as template. After cloning, feel free to delete the `.git` dir, and init your own git, e.g.:
 
 ```
-$ git clone https://github.com/bylexus/docsify-starter
+$ git clone https://github.com/bylexus/docsify-starter.git
 $ cd docsify-starter
 $ rm -rf .git
 $ git init
