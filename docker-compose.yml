@@ -1,0 +1,20 @@
+version: '3'
+services:
+  docsify:
+    build: ./docker/docsify
+    container_name: docsify
+    ports:
+      - "8000:8000"
+    volumes:
+        - ./docs:/site
+    working_dir: /site
+    command: docsify serve . -p 8000
+
+  plantuml:
+    image: "jetty"
+    container_name: plantuml
+    ports:
+        - "8001:8080"
+    volumes:
+        - ./plantuml.war:/var/lib/jetty/webapps/ROOT.war
+
